@@ -1,4 +1,0 @@
-requests
-pytelegrambotapi
-python-decouple
-black

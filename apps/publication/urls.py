@@ -15,5 +15,6 @@ router.register('posts', PostView, basename='posts'),
 urlpatterns = [
     path('categories/', CategoryView.as_view()),
     path('tags/', TagView.as_view()),
+    # path('posts/', PostView.as_view({'get': 'list'})),
     path('', include(router.urls)),
 ]
