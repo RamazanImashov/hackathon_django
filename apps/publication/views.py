@@ -9,6 +9,13 @@ from apps.review.models import *
 from rest_framework.decorators import action
 
 # Create your views here.
+import logging
+from django.http import HttpResponse
+logger = logging.getLogger(__name__)
+def index(request):
+    logger.error("Test!!")
+    return HttpResponse("Hello logging world.")
+
 
 class CategoryView(generics.ListCreateAPIView):
     queryset = Teams.objects.all()
